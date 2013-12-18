@@ -54,6 +54,7 @@ class TestEshots(BaseTestCase):
             # Use requests to grab headers of the links
             r = requests.get(href)
             assert r.headers
+            assert r.status_code == 200
             #if r.headers:
             #    print "OK - %s" % href
             #else:
