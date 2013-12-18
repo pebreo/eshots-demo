@@ -19,7 +19,7 @@ class BaseTestCase(unittest.TestCase):
 
 class TestEshots(BaseTestCase):
     
-    @unittest.skip('wip')
+    #@unittest.skip('wip')
     def test_invalid_login(self):
         """ Test invalid login credentials to eshots """
         self.driver.get('https://reporting.eshots.com/pentaho/Login')
@@ -29,7 +29,7 @@ class TestEshots(BaseTestCase):
         self.driver.save_screenshot('invalid_login.png')
         assert 'Invalid login.' in self.driver.page_source
 
-    @unittest.skip('wip')
+    #@unittest.skip('wip')
     def test_empty_form_submission(self):
         """ Test empty form submission """
         self.driver.get('http://eshots.com/request-demo/')
