@@ -4,7 +4,6 @@ from selenium import webdriver
 
 #PHANTOMJS_DRIVER = r'C:\\python27\\phantomjs.exe'
 
-
 class BaseTestCase(unittest.TestCase):
     
     @classmethod
