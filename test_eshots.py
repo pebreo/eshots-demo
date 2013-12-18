@@ -46,10 +46,7 @@ class TestEshots(BaseTestCase):
         links = self.driver.find_elements_by_xpath('//body//a[string-length(@href)>1]')
         
         # Filter only valid links
-        links = [l for l in links \
-                    if l.get_attribute('href').startswith('http://www.eshots') or \
-                       l.get_attribute('href').startswith('http://reporting.eshots')
-        ]
+        links = [l for l in links if l.get_attribute('href').startswith('http://www.eshots') or l.get_attribute('href').startswith('http://reporting.eshots')]
         
         for link in links[:3]:
             href = link.get_attribute('href')
