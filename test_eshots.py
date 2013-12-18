@@ -48,7 +48,7 @@ class TestEshots(BaseTestCase):
         # Filter only valid links
         links = [l for l in links if l.get_attribute('href').startswith('http://www.eshots')]
         
-        for link in links[:3]:
+        for link in links:
             href = link.get_attribute('href')
             print "Checking link %s" % href 
             # Use requests to grab headers of the links
